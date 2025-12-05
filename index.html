@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix Watchlist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Watchlist Film</h1>
+
+<!-- FORM TAMBAH -->
+<div class="form-container">
+    <input type="text" id="titleInput" placeholder="Judul film..." />
+    <input type="file" id="posterUpload" accept="image/*" />
+    <select id="genreInput">
+        <option value="">Pilih Genre</option>
+        <option>Action</option>
+        <option>Drama</option>
+        <option>Comedy</option>
+        <option>Horror</option>
+        <option>Romance</option>
+        <option>Fantasy</option>
+    </select>
+    <select id="statusInput">
+        <option value="Belum Ditonton">Belum Ditonton</option>
+        <option value="Sudah Ditonton">Sudah Ditonton</option>
+    </select>
+    <input type="number" id="ratingInput" placeholder="Rating (1-10)" min="1" max="10" />
+    <button onclick="addMovie()">Tambah</button>
+</div>
+
+<!-- SEARCH -->
+<div class="search-container">
+    <input type="text" id="searchInput" placeholder="Cari film..." onkeyup="render()" />
+</div>
+
+<!-- DAFTAR -->
+<div class="grid" id="movieList"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
